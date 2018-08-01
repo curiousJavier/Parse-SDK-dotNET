@@ -28,8 +28,13 @@ namespace Parse {
     [SerializeField]
     public string dotnetKey;
 
+    /// <summary>
+    /// The Parse.com API server to connect to.
+    /// 
+    /// Can be override if using a different server than https://api.parse.com/1.
+    /// </summary>
     [SerializeField]
-    public string serverURL;
+    public string serverURL = "https://api.parse.com/1/";
 
     /// <summary>
     /// Initializes the Parse SDK and begins running network requests created by Parse.
