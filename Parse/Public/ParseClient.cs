@@ -124,6 +124,28 @@ namespace Parse {
     /// way is to put a call to <c>ParseFramework.Initialize</c> in your
     /// Application startup.
     /// </summary>
+    /// <param name="applicationId">The Application ID provided in the Parse dashboard.
+    /// </param>
+    /// <param name="dotnetKey">The .NET API Key provided in the Parse dashboard.
+    /// </param>
+    /// <param name="dotnetKey">The .NET API Key provided in the Parse dashboard.
+    /// </param>
+    public static void Initialize(string applicationId, string dotnetKey, string serverURL)
+    {
+        Initialize(new Configuration
+        {
+            ApplicationId = applicationId,
+            WindowsKey = dotnetKey,
+            Server = serverURL
+        });
+    }
+
+    /// <summary>
+    /// Authenticates this client as belonging to your application. This must be
+    /// called before your application can use the Parse library. The recommended
+    /// way is to put a call to <c>ParseFramework.Initialize</c> in your
+    /// Application startup.
+    /// </summary>
     /// <param name="configuration">The configuration to initialize Parse with.
     /// </param>
     public static void Initialize(Configuration configuration) {

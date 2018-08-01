@@ -28,6 +28,9 @@ namespace Parse {
     [SerializeField]
     public string dotnetKey;
 
+    [SerializeField]
+    public string serverURL;
+
     /// <summary>
     /// Initializes the Parse SDK and begins running network requests created by Parse.
     /// </summary>
@@ -66,7 +69,7 @@ namespace Parse {
         // Keep this gameObject around, even when the scene changes.
         GameObject.DontDestroyOnLoad(gameObject);
 
-        ParseClient.Initialize(applicationID, dotnetKey);
+        ParseClient.Initialize(applicationID, dotnetKey, serverURL);
 
         // Kick off the dispatcher.
         StartCoroutine(PlatformHooks.RunDispatcher());

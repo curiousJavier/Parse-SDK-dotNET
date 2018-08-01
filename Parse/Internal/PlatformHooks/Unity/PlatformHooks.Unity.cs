@@ -1159,10 +1159,10 @@ namespace Parse {
       settingsPath = Path.Combine(Application.persistentDataPath, "Parse.settings");
       // We can only set some values here since we can be sure that Initialize is always called
       // from main thread.
-      isWebPlayer = Application.isWebPlayer;
+      isWebPlayer = false;
       osVersion = SystemInfo.deviceModel;
       appBuildVersion = Application.version;
-      appDisplayVersion = Application.bundleIdentifier;
+      appDisplayVersion = Application.identifier;
       appName = Application.productName;
 
       settings = SettingsWrapper.Wrapper;
